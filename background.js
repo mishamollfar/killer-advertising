@@ -1,6 +1,6 @@
 chrome.runtime.onInstalled.addListener(details => {
     // console.log('Extension was installed!', details.previousVersion);
-    sendingMessage();
+    // sendingMessage();
 });
 
 chrome.browserAction.onClicked.addListener(() => {
