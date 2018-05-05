@@ -5,5 +5,11 @@ chrome.runtime.onMessage.addListener(async(request) => {
 });
 
 function init() {
-    console.log('killer advertising content script');
+    document.addEventListener('DOMContentLoaded', () => {
+        let advertisingElementArray = document.querySelectorAll('iframe');
+        if (advertisingElementArray.length) {
+            console.log('advertisingElementArray', advertisingElementArray);
+            delete advertisingElementArray;
+        }
+    })
 }
